@@ -69,6 +69,7 @@
                 <outlet property="featuredProductDataNames" destination="bSU-3l-KRT" id="726-w9-Us4"/>
                 <outlet property="featuredProductImage" destination="hVP-YQ-Oqj" id="Lkc-vV-qww"/>
                 <outlet property="featuredProductTitle" destination="I1C-Rz-ngp" id="6L7-by-6fX"/>
+                <outlet property="tickImage" destination="m0C-Ch-pKe" id="Qlm-M2-FYu"/>
             </connections>
             <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
         </collectionViewCell>

@@ -9,6 +9,7 @@ import UIKit
 
 class FeaturedProductCollectioViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var tickImage: UIImageView!
     @IBOutlet weak var featuredProductDataNames: UILabel!
     @IBOutlet weak var featuredProductTitle: UILabel!
     @IBOutlet weak var featuredProductImage: UIImageView!

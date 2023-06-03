@@ -33,7 +33,7 @@ struct ProductData : Codable {
     let product_id,product_name : String
     let images : String
     let price: String
-    let unit : UnitScale
+    let unit : String
     let type : String
 }
 // MARK: - Advertisement

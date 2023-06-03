@@ -43,6 +43,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="raisePickUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WxK-kr-aab"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -60,11 +63,53 @@
                     <navigationItem key="navigationItem" id="1af-F9-lgF"/>
                     <connections>
                         <outlet property="featuredProductsCollectionView" destination="58h-tb-39j" id="eIR-lJ-Ffd"/>
+                        <outlet property="raisePickupButton" destination="IBK-iJ-ZgJ" id="Sdu-7f-lwV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="dJN-XQ-LO6">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailViewController" id="wwp-Tb-gVA" customClass="ProductDetailViewController" customModule="WasteManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RQy-Fa-QgU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-Dn-LXq">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yRg-3d-Z2g">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gIi-7Y-UkB">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wWn-hI-bhC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ei9-Dn-LXq" firstAttribute="top" secondItem="wWn-hI-bhC" secondAttribute="top" id="3xE-J7-k9L"/>
+                            <constraint firstItem="wWn-hI-bhC" firstAttribute="bottom" secondItem="Ei9-Dn-LXq" secondAttribute="bottom" id="Jb4-8T-Qeo"/>
+                            <constraint firstItem="wWn-hI-bhC" firstAttribute="trailing" secondItem="Ei9-Dn-LXq" secondAttribute="trailing" id="nz2-dh-cAz"/>
+                            <constraint firstItem="Ei9-Dn-LXq" firstAttribute="leading" secondItem="wWn-hI-bhC" secondAttribute="leading" id="vjs-u3-uIZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="productDetailCollectionView" destination="Ei9-Dn-LXq" id="dRT-6v-uIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yf-hC-dNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915" y="-19"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oLh-hy-hAr">

@@ -78,33 +78,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-Dn-LXq">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pGR-4R-h3d">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yRg-3d-Z2g">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5wG-aF-bFG">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gIi-7Y-UkB">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="" id="mLm-dJ-Ror" customClass="ProductHeaderView" customModule="WasteManagement" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgc-e3-vvc">
+                                            <rect key="frame" x="8" y="8" width="377" height="34"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Xgc-e3-vvc" firstAttribute="top" secondItem="mLm-dJ-Ror" secondAttribute="topMargin" id="Hp4-XF-c4x"/>
+                                        <constraint firstItem="Xgc-e3-vvc" firstAttribute="leading" secondItem="mLm-dJ-Ror" secondAttribute="leadingMargin" id="IwQ-2v-KoT"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Xgc-e3-vvc" secondAttribute="trailing" id="rPn-Tt-BvO"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Xgc-e3-vvc" secondAttribute="bottom" id="yPT-Q0-CnX"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="headerTitle" destination="Xgc-e3-vvc" id="QRI-UR-vZz"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wWn-hI-bhC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ei9-Dn-LXq" firstAttribute="top" secondItem="wWn-hI-bhC" secondAttribute="top" id="3xE-J7-k9L"/>
-                            <constraint firstItem="wWn-hI-bhC" firstAttribute="bottom" secondItem="Ei9-Dn-LXq" secondAttribute="bottom" id="Jb4-8T-Qeo"/>
-                            <constraint firstItem="wWn-hI-bhC" firstAttribute="trailing" secondItem="Ei9-Dn-LXq" secondAttribute="trailing" id="nz2-dh-cAz"/>
-                            <constraint firstItem="Ei9-Dn-LXq" firstAttribute="leading" secondItem="wWn-hI-bhC" secondAttribute="leading" id="vjs-u3-uIZ"/>
+                            <constraint firstItem="pGR-4R-h3d" firstAttribute="leading" secondItem="wWn-hI-bhC" secondAttribute="leading" id="27S-xX-9ED"/>
+                            <constraint firstItem="pGR-4R-h3d" firstAttribute="top" secondItem="wWn-hI-bhC" secondAttribute="top" id="Leg-b2-mgU"/>
+                            <constraint firstItem="wWn-hI-bhC" firstAttribute="trailing" secondItem="pGR-4R-h3d" secondAttribute="trailing" id="YDy-yy-nFe"/>
+                            <constraint firstItem="wWn-hI-bhC" firstAttribute="bottom" secondItem="pGR-4R-h3d" secondAttribute="bottom" id="nFd-V4-ec3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="productDetailCollectionView" destination="Ei9-Dn-LXq" id="dRT-6v-uIa"/>
+                        <outlet property="productDetailCollectionView" destination="pGR-4R-h3d" id="Qzw-P8-5HS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yf-hC-dNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

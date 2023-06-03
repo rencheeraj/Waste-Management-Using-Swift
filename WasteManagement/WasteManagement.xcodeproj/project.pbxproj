@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74072C1D2A2B50C600A7ED5A /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74072C1C2A2B50C600A7ED5A /* ProductDetailViewController.swift */; };
+		7470B4C32A2B78F2002D1210 /* ProductHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470B4C22A2B78F2002D1210 /* ProductHeaderView.swift */; };
 		7472A9092A29FACB008C6B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7472A9082A29FACB008C6B05 /* AppDelegate.swift */; };
 		7472A90B2A29FACB008C6B05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7472A90A2A29FACB008C6B05 /* SceneDelegate.swift */; };
 		7472A90D2A29FACB008C6B05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7472A90C2A29FACB008C6B05 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		74072C1C2A2B50C600A7ED5A /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		7470B4C22A2B78F2002D1210 /* ProductHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHeaderView.swift; sourceTree = "<group>"; };
 		7472A9052A29FACB008C6B05 /* WasteManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WasteManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7472A9082A29FACB008C6B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7472A90A2A29FACB008C6B05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 				74072C1C2A2B50C600A7ED5A /* ProductDetailViewController.swift */,
 			);
 			path = ProductDetailViewController;
+			sourceTree = "<group>";
+		};
+		746552862A2B6E130096B0FD /* HeaderClass */ = {
+			isa = PBXGroup;
+			children = (
+				7470B4C22A2B78F2002D1210 /* ProductHeaderView.swift */,
+			);
+			path = HeaderClass;
 			sourceTree = "<group>";
 		};
 		7472A8FC2A29FACB008C6B05 = {
@@ -131,6 +141,7 @@
 		7472A9202A29FB0A008C6B05 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				746552862A2B6E130096B0FD /* HeaderClass */,
 				74811A252A2B1BCF000348E1 /* FeaturedProductDataCollectionViewCell */,
 				74811A202A2B1966000348E1 /* FeaturedProductCollectioViewCell */,
 			);
@@ -265,6 +276,7 @@
 				74072C1D2A2B50C600A7ED5A /* ProductDetailViewController.swift in Sources */,
 				7472A9092A29FACB008C6B05 /* AppDelegate.swift in Sources */,
 				7472A9242A29FB68008C6B05 /* ResponseModel.swift in Sources */,
+				7470B4C32A2B78F2002D1210 /* ProductHeaderView.swift in Sources */,
 				7472A90B2A29FACB008C6B05 /* SceneDelegate.swift in Sources */,
 				7472A9292A2A0498008C6B05 /* Constants.swift in Sources */,
 				7472A92B2A2A3543008C6B05 /* APIManager.swift in Sources */,

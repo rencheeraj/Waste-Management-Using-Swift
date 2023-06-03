@@ -23,6 +23,7 @@
 		74811A282A2B1BFA000348E1 /* FeaturedProductDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74811A262A2B1BFA000348E1 /* FeaturedProductDataCollectionViewCell.swift */; };
 		74811A292A2B1BFA000348E1 /* FeaturedProductDataCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74811A272A2B1BFA000348E1 /* FeaturedProductDataCollectionViewCell.xib */; };
 		74811A2C2A2B28FD000348E1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 74811A2B2A2B28FD000348E1 /* Kingfisher */; };
+		74A560872A2B969D00890763 /* ProductHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74A560862A2B969D00890763 /* ProductHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		74811A222A2B199F000348E1 /* FeaturedProductCollectioViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedProductCollectioViewCell.xib; sourceTree = "<group>"; };
 		74811A262A2B1BFA000348E1 /* FeaturedProductDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductDataCollectionViewCell.swift; sourceTree = "<group>"; };
 		74811A272A2B1BFA000348E1 /* FeaturedProductDataCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedProductDataCollectionViewCell.xib; sourceTree = "<group>"; };
+		74A560862A2B969D00890763 /* ProductHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				7470B4C22A2B78F2002D1210 /* ProductHeaderView.swift */,
+				74A560862A2B969D00890763 /* ProductHeaderView.xib */,
 			);
 			path = HeaderClass;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				74811A292A2B1BFA000348E1 /* FeaturedProductDataCollectionViewCell.xib in Resources */,
 				7472A9102A29FACB008C6B05 /* Main.storyboard in Resources */,
 				74811A242A2B199F000348E1 /* FeaturedProductCollectioViewCell.xib in Resources */,
+				74A560872A2B969D00890763 /* ProductHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

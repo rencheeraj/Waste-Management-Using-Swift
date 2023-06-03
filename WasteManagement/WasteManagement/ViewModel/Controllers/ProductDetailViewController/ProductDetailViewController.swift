@@ -16,7 +16,7 @@ class ProductDetailViewController: UIViewController {
         super.viewDidLoad()
 
 //         Do any additional setup after loading the view.
-        productDetailCollectionView.register(ProductHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ProductHeaderView")
+        productDetailCollectionView.register(UINib(nibName: "ProductHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ProductHeaderView")
         setupCollectionView()
         
     }
@@ -40,24 +40,20 @@ extension ProductDetailViewController : UICollectionViewDelegate, UICollectionVi
                         at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
           case UICollectionView.elementKindSectionHeader:
- 
             let headerView = collectionView.dequeueReusableSupplementaryView(
               ofKind: kind,
               withReuseIdentifier: "\(ProductHeaderView.self)",
-              for: indexPath)
-
-            guard let typedHeaderView = headerView as? ProductHeaderView
-            else { return headerView }
-
-//            let searchTerm = displayData![indexPath.section].name
-            typedHeaderView.headerTitle.text = displayData![indexPath.section].name
+              for: indexPath) as? ProductHeaderView
+            guard let typedHeaderView = headerView
+            else { return headerView! }
+            typedHeaderView.headerTitle?.text = displayData![indexPath.section].name
             return typedHeaderView
           default:
             assert(false, "Invalid element type")
           }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-            return CGSize(width: collectionView.frame.width, height: 60.0)
+        return CGSize(width: collectionView.frame.width, height: 80)
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedProductDataCollectionViewCell", for: indexPath) as? FeaturedProductDataCollectionViewCell else {

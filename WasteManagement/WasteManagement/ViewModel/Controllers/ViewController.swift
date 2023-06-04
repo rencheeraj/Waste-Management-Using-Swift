@@ -78,6 +78,7 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
         if arrSelectedIndex.contains(indexPath){
             cell.tickImage.isHidden = false
             cell.tickImage.backgroundColor = UIColor(patternImage: .checkmark)
+//            selectedArrayData.append(valueResponse![indexPath.row])
         }else{
             cell.tickImage.isHidden = true
         }
@@ -94,12 +95,17 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let strData = valueResponse![indexPath.item]
-
+        let strData : FeaturedProduct = valueResponse![indexPath.item]
+        var indexForRemove : Int?
                 if arrSelectedIndex.contains(indexPath) {
                     arrSelectedIndex = arrSelectedIndex.filter { $0 != indexPath}
-                    selectedArrayData.remove(at: indexPath.row)
-                    print(selectedArrayData.count)
+                    selectedArrayData.indices.forEach { i in
+                        if selectedArrayData[i].id == strData.id
+                        {
+                            indexForRemove = i
+                        }
+                    }
+                    selectedArrayData.remove(at: indexForRemove!)
                 }
                 else {
                     arrSelectedIndex.append(indexPath)

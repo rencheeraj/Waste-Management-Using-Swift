@@ -62,7 +62,7 @@ extension ProductDetailViewController : UICollectionViewDelegate, UICollectionVi
         cell.featuredProductDataTitle.text = displayData?[indexPath.section].products[indexPath.row].product_name
         let url = URL(string: displayData?[indexPath.section].products[indexPath.row].images ?? "")
         cell.featuredProductDataImage.kf.setImage(with: url)
-        cell.featuredProductDataUnitPrice.text = displayData?[indexPath.section].products[indexPath.row].price
+        cell.featuredProductDataUnitPrice?.text = " \(displayData![indexPath.section].products[indexPath.row].price) / \(displayData![indexPath.section].products[indexPath.row].unit)"
         setSandL(cell: cell)
         return cell
     }
